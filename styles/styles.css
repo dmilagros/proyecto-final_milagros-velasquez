@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
 	margin: 0;
 	padding: 0;
@@ -47,6 +46,38 @@ main>h1 {
 	display: flex;
 	gap: 20px;
 	justify-content: space-evenly;
+}
+
+.cart-table {
+	width: 100%;
+}
+
+table {
+	margin: 30px;
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid purple;
+}
+
+thead th, tbody td {
+	width: 15%;
+	text-align: right;
+}
+
+thead th:nth-child(1), tbody td:nth-child(1) {
+	width: 55%;
+	text-align: left;
+}
+
+th,
+td {
+	padding: 20px;
+	border-left: 1px solid purple;
+}
+
+th {
+	border-bottom: 1px solid purple;
 }
 
 .product-list {
@@ -122,8 +153,12 @@ button:hover {
 	background-color: #1e2121;
 }
 
+.cart-title {
+	margin: 30px 0 0 30px;
+}
+
 .cart-summary {
-	margin-top: 20px;
+	margin: 30px;
 	text-align: right;
 }
 

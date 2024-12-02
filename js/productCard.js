@@ -1,5 +1,4 @@
 export function createProductCard(product) {
-	console.log('product -->', product)
   const card = document.createElement("div");
   card.classList.add("product-card");
 
@@ -14,7 +13,7 @@ export function createProductCard(product) {
   description.textContent = product.description;
 
   const price = document.createElement("p");
-  price.textContent = `$${product.price}`;
+  price.textContent = `$${product.price.toFixed(2)}`;
 
   const button = document.createElement("button");
   button.textContent = "Agregar al carrito";
@@ -30,7 +29,7 @@ export function createProductCard(product) {
 }
 
 async function addToCart(product) {
-  console.log("product", product);
+
   const info = {
     userId: 5,
     date: "2020-02-03",
