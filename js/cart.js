@@ -47,9 +47,17 @@ async function loadCart() {
   totalElement.textContent = `$${totalCost.toFixed(2)}`;
 
   const checkoutButton = document.querySelector("#checkout-button");
-  checkoutButton.addEventListener("click", () => {
-    alert(`Gracias por tu compra. El total es $${totalCost.toFixed(2)}.`);
-  });
+
+	if(totalCost >  0) {
+		checkoutButton.addEventListener("click", () => {
+			alert(`Gracias por tu compra. El total es $${totalCost.toFixed(2)}.`);
+		});
+	} else {
+		checkoutButton.addEventListener("click", () => {
+			alert(`Debes agregar productos al carrito}.`);
+		});
+
+	}
 }
 
 loadCart();
